@@ -21,21 +21,39 @@ num = my_list[1:4]   # 步长默认为1,所以可以省略不写
 print(num)  # 结果为[1,2,3]
 
 # 对list进行切片，从3开始，到1结束，步长-1
-my_tuple = (0,1,2,3,4,5,6)
-num2 = my_tuple[:]   # 起始和结束不写,表示从头到尾,步长为1,所以可以省略
-print(num2) # 结果为[0,1,2,3,4,5,6]
+num2 = my_list[3:1:-1]
+print(num2)  # 结果为[3,2]
 
 # 对tuple进行切片,从头开始，到最后结束，步长1
-my_str = "0123456"
-num3 = my_str[::2]
-print(num3) # 0246
+my_tuple = (0,1,2,3,4,5,6)
+num3 = my_tuple[:]   # 起始和结束不写,表示从头到尾,步长为1,所以可以省略
+print(num3) # 结果为(0,1,2,3,4,5,6)
 
 # 对tuple进行切片,从头开始,到尾结束,步长-2
+num4 = my_tuple[::-2]
+print(num4)     # 结果为(6,4,2,0)
 
 # 对str进行切片，从头开始，到最后结束，步长2
+my_str = "0123456"
+num5 = my_str[::2]
+print(num5) # 0246
 
 # 对str进行切片，从头开始，到最后结束，步长-1
+num6 = my_str[::-1]
+print(num6)
 
+
+# work
+my_str = "万过薪月,员序程马黑来,nohtyP学"
+# 倒序字符串,切片取出
+result1 = my_str[::-1][9:14]
+print(result1)
+# 切片取出,如何倒序
+result2 = my_str[5:10][::-1]
+print(result2)
+# split分割,replace替换来为空,倒序字符串
+result3 = my_str.split(",")[1].replace("来","")[::-1]
+print(result3)
 
 
 
